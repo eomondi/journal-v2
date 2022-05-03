@@ -21,33 +21,62 @@ app.use(express.urlencoded({
 app.use(express.static("public"));
 
 app.get('/', function(req, res) {
-
+  let homeActivity = "active";
+  let writeActivity = "";
+  let aboutActivity = "";
+  let contactActivity = "";
   res.render("home", {
     homeWords: homeStartingContent,
-    morePosts: posts
+    morePosts: posts,
+    homeMenuLink: homeActivity,
+    writeMenuLink: writeActivity,
+    aboutMenuLink: aboutActivity,
+    contactMenuLink: contactActivity
   });
 
 });
 
 app.get('/about', function(req, res) {
-
+  let homeActivity = "";
+  let writeActivity = "";
+  let aboutActivity = "active";
+  let contactActivity = "";
   res.render("about", {
-    aboutWords: aboutContent
+    aboutWords: aboutContent,
+    homeMenuLink: homeActivity,
+    writeMenuLink: writeActivity,
+    aboutMenuLink: aboutActivity,
+    contactMenuLink: contactActivity
   });
 
 });
 
 app.get('/contact', function(req, res) {
-
+  let homeActivity = "";
+  let writeActivity = "";
+  let aboutActivity = "";
+  let contactActivity = "active";
   res.render("contact", {
-    contactWords: contactContent
+    contactWords: contactContent,
+    homeMenuLink: homeActivity,
+    writeMenuLink: writeActivity,
+    aboutMenuLink: aboutActivity,
+    contactMenuLink: contactActivity
   });
 
 });
 
 app.get('/compose', function(req, res) {
-
-  res.render("compose");
+  let homeActivity = "";
+  let writeActivity = "active";
+  let aboutActivity = "";
+  let contactActivity = "";
+  res.render("compose", {
+    homeMenuLink: homeActivity,
+    writeMenuLink: writeActivity,
+    aboutMenuLink: aboutActivity,
+    contactMenuLink: contactActivity
+  });
 
 });
 
