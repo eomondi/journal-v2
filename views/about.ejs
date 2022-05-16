@@ -1,8 +1,28 @@
 <%- include('partials/header'); -%>
 <h1>About</h1>
 <p><%= aboutWords %></p>
-<div class="span2">
-  <a href="https://sleepy-beach-06464.herokuapp.com/"><button class="btn btn-outline-info" type="button">Newsletter Sign Up<i class="fa-solid fa-eye" style="padding-left: 0.5em;"></i></button></a>
-  <a href="https://sleepy-sea-91555.herokuapp.com/"><button class="btn btn-outline-info" type="button">To Do List<i class="fa-solid fa-eye" style="padding-left: 0.5em;"></i></button></a>
+<div class="d-flex gap-5 justify-content-center">
+  <ul class="dropdown-menu d-block position-static mx-0 shadow w-220px">
+    <li>
+      <a class="dropdown-item d-flex gap-2 align-items-center" href="https://sleepy-beach-06464.herokuapp.com/">
+        Newsletter Sign Up
+      </a>
+    </li>
+    <li>
+      <a class="dropdown-item d-flex gap-2 align-items-center" href="https://sleepy-sea-91555.herokuapp.com/">
+        To Do List v1
+      </a>
+    </li>
+    <li>
+      <a class="dropdown-item d-flex gap-2 align-items-center" href="https://rocky-stream-61780.herokuapp.com/">
+        To Do List v2
+      </a>
+    </li>
+    <li>
+      <a class="dropdown-item d-flex gap-2 align-items-center" href="https://polar-badlands-12871.herokuapp.com/">
+        Blog v1
+      </a>
+    </li>
+  </ul>
 </div>
 <%- include('partials/footer'); -%>
